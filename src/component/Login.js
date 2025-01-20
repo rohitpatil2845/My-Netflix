@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import Header from "./Header";
+import { checkValidation } from "../utils/Validation";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
+
+  const handleButtonClick = () => {
+    checkValidation();
+  }
 
   const toggleSignForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -38,7 +43,7 @@ const Login = () => {
           placeholder="Password"
           className="p-2 m-2 rounded-lg  bg-zinc-600 w-full"
         />
-        <button className="p-2 m-2 rounded-lg bg-red-700 w-full">
+        <button className="p-2 m-2 rounded-lg bg-red-700 w-full"> onClick={handleButtonClick}
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
         <button
