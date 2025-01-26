@@ -8,6 +8,7 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlic";
 
+
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
